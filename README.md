@@ -20,6 +20,7 @@ Material Design v10.2.0
 Install nodejs
 Install Angular CLI
 Install Material Design
+npm install material-design-icons
 
 clone project
 enter folder
