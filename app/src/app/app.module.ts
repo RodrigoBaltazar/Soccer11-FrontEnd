@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,12 +22,26 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GoalsComponent } from './goals/goals.component';
+import { FunnyComponent } from './funny/funny.component';
+import { PlaysComponent } from './plays/plays.component';
+import { SubmitComponent } from './submit/submit.component';
+import { PostComponent } from './post/post.component'; // importado na mão pois nao usei o CLI --routing
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     VideoTableComponent,
-    DashboardCuradoriaComponent
+    DashboardCuradoriaComponent,
+    PageNotFoundComponent,
+    GoalsComponent,
+    FunnyComponent,
+    PlaysComponent,
+    SubmitComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +58,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSortModule,
     MatGridListModule,
     MatCardModule,
+    AppRoutingModule, // CLI adds AppRoutingModule to the AppModule's imports array
+    FormsModule,
     MatMenuModule
   ],
   providers: [],

@@ -5,9 +5,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Goals</a>
-      <a mat-list-item href="#">Funny</a>
-      <a mat-list-item href="#">Plays</a>
+      <a mat-list-item routerLink="/goals" routerLinkActive="active">Goals</a>
+      <a mat-list-item routerLink="/plays" routerLinkActive="active">Plays</a>
+      <a mat-list-item routerLink="/funny" routerLinkActive="active">Funny</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -21,16 +21,15 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="example-spacer">Soccer 11</span>
+      <span class="example-spacer"><a mat-list-item routerLink="/" routerLinkActive="active">Soccer 11</a></span>
       <button mat-icon-button class="assignment return" aria-label="Example icon-button with heart icon">
-        <i class="material-icons md-24">add</i>
+        <a mat-list-item routerLink="/submit" routerLinkActive="active"><i class="material-icons md-24">add</i></a>
       </button>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>share</mat-icon>
       </button>
       <i class="material-icons md-24">login</i>
     </mat-toolbar>
-    
-    <app-video-table></app-video-table>
-  </mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>
