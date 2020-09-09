@@ -1,6 +1,33 @@
 <div class="grid-container">
     <h1 class="mat-h1">Goals</h1>
     <mat-grid-list cols="2" rowHeight="350px">
-      
+      <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+        
+        
+        <div>
+        <mat-card class="example-card">
+          
+            <mat-card-header>
+              <mat-card-title>
+                {{card.title}}
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Publish</button>
+                  <button mat-menu-item>Delete</button>
+                </mat-menu>
+              </mat-card-title>
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            </mat-card-header>
+          
+            
+                  
+        </mat-card>
+      </div>
+      </mat-grid-tile>
+    
     </mat-grid-list>
   </div>
+
+  
