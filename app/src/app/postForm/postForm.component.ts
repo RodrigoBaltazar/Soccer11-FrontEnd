@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post/post.component';
 
 @Component({
-  selector: 'app-submit',
-  templateUrl: './submit.component.html',
-  styleUrls: ['./submit.component.css']
+  selector: 'app-postForm',
+  templateUrl: './postForm.component.html',
+  styleUrls: ['./postForm.component.css']
 })
-export class SubmitComponent{
+export class postFormComponent{
 
   title = ['Goals', 'Funny', 'Plays'];
 

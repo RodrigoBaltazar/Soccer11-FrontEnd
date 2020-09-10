@@ -27,7 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { GoalsComponent } from './goals/goals.component';
 import { FunnyComponent } from './funny/funny.component';
 import { PlaysComponent } from './plays/plays.component';
-import { SubmitComponent } from './submit/submit.component';
+import { postFormComponent } from './postForm/postForm.component';
 import { PostComponent } from './post/post.component'; // importado na mão pois nao usei o CLI --routing
 
 @NgModule({
@@ -40,7 +40,7 @@ import { PostComponent } from './post/post.component'; // importado na mão pois
     GoalsComponent,
     FunnyComponent,
     PlaysComponent,
-    SubmitComponent,
+    postFormComponent,
     PostComponent
   ],
   imports: [

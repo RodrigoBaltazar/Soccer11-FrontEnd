@@ -9,14 +9,14 @@ import { GoalsComponent } from '../goals/goals.component';
 import { FunnyComponent } from '../funny/funny.component';
 import { PlaysComponent } from '../plays/plays.component';
 
-import { SubmitComponent } from '../submit/submit.component';
+import { postFormComponent } from '../postForm/postForm.component';
 const routes: Routes = [
   { path: 'navbar-Component', component: NavbarComponent },
   //{ path: 'navbar-Component', component: NavbarComponent }, //login
   //{ path: 'navbar-Component', component: NavbarComponent }, //publish
   //{ path: 'navbar-Component', component: NavbarComponent }, //share
 
-  { path: 'submit', component: SubmitComponent }, //submit
+  { path: 'postForm', component: postFormComponent }, //postForm
   { path: 'goals', component: GoalsComponent }, //goals
   { path: 'funny', component: FunnyComponent }, //funny
   { path: 'plays', component: PlaysComponent }, //plays
